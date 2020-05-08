@@ -1,12 +1,5 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// Interactive Selection
-// http://www.genarts.com/karl/papers/siggraph91.html
-
 // A class to describe a population of faces
-// this hasn't changed very much from example to example
+
 
 // Create the population
 class Population {
@@ -40,18 +33,14 @@ class Population {
   }
 
   haveBabies(num) {
-    // let cols = floor(this.num / 2);
-    // let rows = floor(this.num / 5);
-    // let colSpacing = width * 0.2;
-    // let rowSpacing = height * 0.2;
-    let cols = floor(this.num / 4);
-    let rows = floor(this.num / 4);
+    let cols = floor(this.num / 3);
+    let rows = floor(this.num / 5);
     console.log(cols)
-    let colSpacing = windowWidth * 0.25;
-    let rowSpacing = windowHeight * 0.25;
-    console.log(rowSpacing);
+    let colSpacing = windowWidth * 0.166;
+    let rowSpacing = windowHeight * 0.3;
+    console.log(windowHeight);
     for (var i = 0; i < cols; i++) {
-      var x = colSpacing / 2 + colSpacing * i;
+      var x = colSpacing /2  + colSpacing * i;
       for (var j = 0; j < rows; j++) {
         var index = i * rows + j;
         var y = rowSpacing /2 + rowSpacing * j;

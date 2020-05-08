@@ -12,45 +12,32 @@ function setup() {
   angleMode(DEGREES); 
   colorMode(HSB); 
   createCanvas(windowWidth, windowHeight);
-  // colorMode(RGB, 1.0, 1.0, 1.0, 1.0);
-  // let popmax = 20;
-  let popmax = 16; 
-  let mutationRate = 0.08; // A pretty high mutation rate here, our population is rather small we need to enforce variety
-  // Create a population with a target phrase, mutation rate, and population max
+  let popmax = 18; 
+  let mutationRate = 0.08; 
   population = new Population(mutationRate, popmax);
-  // population.haveBabies(popmax);
-  // A simple button class
-  button1 = createButton("evolve new generation");
-  button1.mousePressed(nextGen);
-  button1.position(windowWidth/2-40, windowHeight-20);
-  info = createDiv('');
-  info.position(20, 40);
-
-  //reset button
-  var resetButton = createButton("reset")
-  resetButton.position(windowWidth/2-100, windowHeight-20)
-  // resetButton.position(windowWidth/2+40, windowHeight-20);
-  resetButton.mousePressed(resetSketch);
   
-  function resetSketch() {
-    console.log("this is working");
-    population = new Population(mutationRate, popmax);
-        
-         
+  //RESET BUTTON 
+  var resetButton = document.getElementById("reset-button");
+  resetButton.onclick = function resetSketch(){
+    population = new Population(mutationRate, popmax);  
+    //function to reset the rectangles 
+  console.log("its me hellos");
+  }
+
+  // EVOLVE BUTTON
+  var evolveButton = document.getElementById("evolve-button");
+  evolveButton.onclick = function nextGen() {
+    population.selection();
+    population.reproduction();
   }
 }
 
 function draw() {
   background(0);
-  // translate(width / 2, height / 2); 
   // Display the faces
   population.display();
   population.rollover(mouseX, mouseY);
-  info.html("Generation #:" + population.getGenerations());
+  stroke(255);
 }
 
-// If the button is clicked, evolve next generation
-function nextGen() {
-  population.selection();
-  population.reproduction();
-}
+

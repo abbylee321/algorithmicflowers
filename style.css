@@ -1,4 +1,108 @@
 html, body {
   margin: 0;
   padding: 0;
+  color: white; 
+  background-color: black;
 }
+
+h1{
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif; 
+}
+p{
+  padding: 20px;
+  font-size: 18px; 
+  font-family: 'Verdana', sans-serif
+}
+
+.button {
+  width: 181px;
+  height: 50px;
+  margin: 10px; 
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+	background-color: #2EE59D;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fffaf0;
+	transform: translateY(-7px);
+  }
+
+.text-data{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+}
+
+#page-wrap{
+  width: 800px;
+  /* margin: 0 auto; */
+  margin-top: -120px;
+  margin-left: -400px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.option-row{
+  display: inline flex; 
+}
+
+#reset-button{
+  position: absolute;
+  /* left: 620px; */
+  /* top: 699px; */
+  left: 55%;
+  bottom: 5.5%;
+  margin: 5px;
+  /* background-color: #00d7c3; */
+  background-color:transparent;
+  border: 3px solid #D3D3D3;
+  border-radius: 5px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  /* color: black;  */
+  color: #D3D3D3;
+}
+
+#reset-button:hover {
+  box-shadow: 0 0 10px 0 #D3D3D3 inset, 0 0 20px 2px #D3D3D3;
+  border: 3px solid #D3D3D3;
+}
+
+
+#evolve-button{
+  position: absolute;
+  left: 38%; 
+  bottom: 5.5%;
+  margin: 5px;
+  background-color: transparent;
+  border: 3px solid #D3D3D3;
+  border-radius: 5px; 
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color:#D3D3D3; 
+}
+
+#evolve-button:hover {
+  box-shadow: 0 0 10px 0 #D3D3D3 inset, 0 0 20px 2px #D3D3D3;
+  border: 3px solid #D3D3D3;
+  }
