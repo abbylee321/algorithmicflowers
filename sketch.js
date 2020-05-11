@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
   background(0);
-  // Display the faces
+  // Display the flowers
   population.display();
   population.rollover(mouseX, mouseY);
   stroke(255);

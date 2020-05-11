@@ -1,9 +1,9 @@
-// The class for our "face", contains DNA sequence, fitness value, position on screen
+// The class for our "flower", contains DNA sequence, fitness value, position on screen
 
 // Fitness Function f(t) = t (where t is "time" mouse rolls over face)
 
 // Create a new face
-class Face {
+class Flower {
   constructor(dna_, x_, y_) {
     this.rolloverOn = false; // Are we rolling over this face?
     this.dna = dna_; // Face's DNA

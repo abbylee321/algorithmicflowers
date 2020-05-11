@@ -1,4 +1,4 @@
-// A class to describe a population of faces
+// A class to describe a population of flowers
 
 
 // Create the population
@@ -9,10 +9,7 @@ class Population {
     this.matingPool = [];
     this.generations = 0; // Number of generations
     this.num = num;
-    //Original
-    // for (var i = 0; i < num; i++) {
-    //   this.population[i] = new Face(new DNA(), -200 + i * 150, 200);
-    
+
     // make the population
     this.haveBabies(this.num);
 
@@ -25,7 +22,7 @@ class Population {
     }
   }
 
-  // Are we rolling over any of the faces?
+  // Are we rolling over any of the flowers?
   rollover(mx, my) {
     for (var i = 0; i < this.population.length; i++) {
       this.population[i].rollover(mx, my);
@@ -44,7 +41,7 @@ class Population {
       for (var j = 0; j < rows; j++) {
         var index = i * rows + j;
         var y = rowSpacing /2 + rowSpacing * j;
-        this.population.push(new Face(new DNA(), x, y));
+        this.population.push(new Flower(new DNA(), x, y));
       }
     }
   }
